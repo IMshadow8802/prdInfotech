@@ -1,0 +1,114 @@
+.container.contact_container {
+    width: 58%;
+    display: grid;
+    grid-template-columns: 30% 58%;
+    gap: 12%;
+}
+
+.contact_options {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.contact_option {
+    background: var(--newsletter-bg);
+    padding: 1.2rem;
+    border-radius: 1.2rem;
+    text-align: center;
+    border: 1px solid transparent;
+    transition: var(--transition);
+}
+
+.light-theme .contact_option {
+    background: linear-gradient(180deg,
+            rgba(189, 243, 255, 1) 29%,
+            rgba(193, 243, 255, 1) 50%,
+            rgba(226, 250, 255, 1) 78%);
+    ;
+}
+
+.light-theme .send_btn {
+    background: var(--primary-color);
+    color: #fff;
+}
+
+.light-theme .contact_option-icon{
+    color: #000;
+}
+
+.light-theme .contact_option h5{
+    color: #000;
+}
+
+.light-theme .contact_option h4 {
+    color: #000;
+}
+
+.heading{
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+.contact_option:hover {
+    background: transparent;
+    border: 2px solid;
+    border-color: var(--primary-color);
+}
+
+.contact_option-icon {
+    font-size: 1.5rem;
+    margin: 0.5rem;
+    color: #fff;
+}
+
+.contact_option a {
+    margin-top: 0.7rem;
+    display: inline-block;
+    font-size: 0.8rem;
+}
+
+.contact_option h5,h4 {
+    color: #ddd;
+}
+
+/* .contact_option h4 {
+    color: #ddd;
+} */
+
+/* FORM */
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 2rem;
+    background: transparent;
+    border-radius: 0.5rem;
+    border: 2px solid var(--primary-color);
+    resize: none;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+
+/* MEDIA QUERIES FOR MEDIUM DEVICES */
+@media screen and (max-width: 1024px) {
+    .container.contact_container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+/* MEDIA QUERIES FOR SMALL DEVICES */
+@media screen and (max-width: 600px) {
+    .container.contact_container {
+        width: var(--container-width-sm);
+    }
+}
